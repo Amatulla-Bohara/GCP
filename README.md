@@ -12,6 +12,10 @@
 - [Identity and Access Management (IAM)](#Identity-and-Access-Management-(IAM))
 - [Service Accounts](#Service-Accounts)
 - [Cloud Identities](#Cloud-Identities)
+- [VIRTUAL MACHINES AND NETWORKS IN CLOUD](#VIRTUAL-MACHINES-AND-NETWORKS-IN-CLOUD)
+- [Virtual private cloud network](#Virtual-private-cloud-network)
+- [Compute Engine](#Compute-Engine)
+- [Scaling virtual machines](#Scaling-cirtual-machines)
 
 # Introduction-Google Cloud Fundamentals
 
@@ -222,6 +226,7 @@ both are applied at the project level.
 
 2. Allocation quotas govern the number of resources you can have in your projects. For example, by default each Google Cloud project has a quota allowing it no more than five virtual private cloud networks. Although projects all start with the same quotas, you can change some of them by requesting an increase from Google Cloud support.
 
+
 # RESOURCES AND ACCESS IN CLOUD
 
 # Google Cloud resource hierarchy
@@ -308,7 +313,7 @@ Specific Google Cloud services offers sets of predefined roles and they even def
 
 But what if you need to assign a role that has even more specific permissions? That's when you'd use :
 
-###Custom role
+### Custom role
 Many companies use a least privileged model in which each person in your organization is given the minimal amount of privilege needed to do their job. 
 For example, maybe you want to define an Instance Operator role to allow some users to stop and start Compute Engine virtual machines but not reconfigure them. 
 Custom roles will allow you to define these exact permissions. Before you start creating Custom roles, please note two important details. 
@@ -393,15 +398,61 @@ The mobile app also offers alerts and incident management.
 You can download the Cloud Console Mobile app at cloud.google.com/console-app.
 
 
+# VIRTUAL MACHINES AND NETWORKS IN CLOUD
+
+# Virtual Private Cloud Networking
+
+Let's explore how Google Compute Engine works with a focus on virtual networking. Many users start with Google Cloud by defining their own virtual private cloud inside their first Google Cloud project. Or by starting with the default Virtual Private Cloud. 
+
+### what is a Virtual Private Cloud?
+A Virtual Private Clouds or VPC is a secure individual private cloud computing model hosted within a public cloud, like Google Cloud. On a VPC, customers can run code, store data, host websites and do anything else they could do in an ordinary private cloud. But this private cloud is hosted remotely by a public cloud provider.
+
+#### This means that VPC's combine the scalability and convenience of public cloud computing with the data isolation of private cloud computing.
+
+VPC networks connect Google Cloud resources to each other and to the internet. This includes segmenting networks. Using firewall rules to restrict access to instances and creating static routes to forward traffic to specific destinations. Here's something that tends to surprise a lot of new Google Cloud users. 
+
+### Google VPC networks are global. 
+They can also have subnets, which is a segmented piece of the larger network in any Google loud region worldwide. Subnets can span the zones that make up a region. This architecture makes it easy to define network layouts with global scope. Resources can even be in different zones on the same subnets.
+
+The size of a sub net can be increased by expanding the range of IP addresses allocated to it. And doing so won't affect virtual machines that are already configured.
+
+For example, let's take a VPC with one network that currently has one sub net defined in google cloud's US east one region. If the VPC has two Compute Engine VMS attached to it. It means their neighbors on the same sub net, even though they're in different zones. This capability can be used to build solutions that are resilient to disruptions, yet retain a simple network layout.
+
+# Compute Engine 
+
+### Google Cloud's IaaS solution-Compute Engine
+With Compute Engine, users can create and run virtual machines on Google infrastructure. There are no upfront investments and thousands of virtual CPUs can run on a system that's designed to be fast and to offer consistent performance. 
+
+Each virtual machine contains the power and functionality of a full-fledged operating system. This means a virtual machine can be configured much like a physical server by specifying the amount of CPU power and memory needed, the amount and type of storage needed, and the operating system. 
+
+A virtual machine instance can be created via the Google Cloud Console, which is a web-based tool to manage Google Cloud Projects and Resources, or via the gcloud command-line tool. The instance can run Linux and Windows Server images provided by Google or any customized versions of these images. You can also build and run images of other operating systems and flexibly reconfigure virtual machines. 
+
+A quick way to get started with Google Cloud is through the Cloud Marketplace, which offers solutions from both Google and third-party vendors. With these solutions, there's no need to manually configure the software, virtual machine instances, storage or network settings, although many of them can be modified before lunch if that's required. Most software packages in Cloud Marketplace are available at no additional charge beyond the normal usage fees for Google Cloud resources. 
+
+Some Cloud Marketplace images charge usage fees, particularly those published by third parties with commercially licensed software. But they all show estimates of their monthly challenges before they're launched. At this point, you might be wondering about Compute Engine's pricing and billing structure. 
+For the use of virtual machines, Compute Engine bills by the second with a one-minute minimum and sustained use discount start to apply automatically to virtual machines the longer they run. For each VM that runs for more than 25 percent of a month, Compute Engine automatically applies a discount for every additional minute. 
+
+### Compute Engine also offers committed use discounts. 
+This means that for stable and predictable workloads, a specific amount of vCPUs and memory can be purchased for up to a 57 percent discount off of normal prices in return for committing to a usage term of one year or three years. 
+
+#### Then there are preemptible VMs. 
+Let's say, you have a workload that doesn't require a human to sit and wait for it to finish, such as a batch job analyzing a large dataset. You can save money, in some cases up to 90 percent by choosing preemptible VMs to run the job. 
+
+A preemptible VM is different from an ordinary Compute Engine VM in only one respect. Compute Engine has permission to terminate a job if its resources are needed elsewhere. Although savings are possible with preemptible VMs, you need to ensure that your job can be stopped and restarted. In terms of storage, Compute Engine doesn't require a particular option or machine type to get high-throughput between processing and persistent disks. That's the default and it comes to you at no extra cost. 
+
+Finally, you'll only pay for what you need with custom machine types. Compute Engine lets you choose the machine properties of your instances, like the number of virtual CPUs and the amounts of memory by using a set of predefined machine types, or by creating your own custom machine types.
 
 
+# Scaling virtual machine
 
+In Compute engine we can choose the most appropriate machine properties for your instances, like the number of virtual CPUs and the amount of memory, by using a set of predefined machine types, or by creating custom machine types. To do this, Compute Engine has a feature called Autoscaling.
 
+### Autoscaling
 
+where VMs can be added to or subtracted from an application based on load metrics. The other part of making that work is balancing the incoming traffic among the VMs. Google’s Virtual Private Cloud (VPC) supports several different kinds of load balancing.
+With Compute Engine, you can in fact configure very large VMs, which are great for workloads such as in-memory databases and CPU-intensive analytics, but most Google Cloud customers start off with scaling out, not up. The maximum number of CPUs per VM is tied to its “machine family” and is also constrained by the quota available to the user, which is zone-dependent. 
 
-
-
-
+Specifications for currently available VM machine types can be found at cloud.google.com/compute/docs/machine-types
 
 
 
