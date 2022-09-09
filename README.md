@@ -3,10 +3,11 @@
 - [Cloud Computing Overview](#Cloud-Computing-Overview)
 - [IaaS & PaaS](#IaaS-&-PaaS)
 - [The Google Cloud Locations](#Google-Cloud-Locations)
-- [Environmental Impact](Environmental-Impact)
+- [Environmental Impact](#Environmental-Impact)
 - [Security](#Security)
 - [OpenSource Ecosystem](#OpenSource-Ecosystem)
 - [Pricing & Billing](#Pricing-&-Billing)
+- [RESOURCES AND ACCESS IN CLOUD](#RESOURCES-AND-ACCESS-IN-CLOUD)
 - [Google Cloud resource hierarchy](#Google-Cloud-resource-hierarchy)
 - [Identity and Access Management (IAM)](#Identity-and-Access-Management-(IAM))
 - [Service Accounts](#Service-Accounts)
@@ -221,6 +222,7 @@ both are applied at the project level.
 
 2. Allocation quotas govern the number of resources you can have in your projects. For example, by default each Google Cloud project has a quota allowing it no more than five virtual private cloud networks. Although projects all start with the same quotas, you can change some of them by requesting an increase from Google Cloud support.
 
+# RESOURCES AND ACCESS IN CLOUD
 
 # Google Cloud resource hierarchy
 
