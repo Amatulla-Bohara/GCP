@@ -6,11 +6,11 @@
 ## The goal of this course is to provide you with an overview of Google Cloud.
 
 Google Cloud offerings can be broadly categorized as-
-compute,
-storage,
-big data,
-machine learning, and
-application services for web, mobile, analytics and back-end solutions.
+#### compute
+#### storage
+#### big data
+#### machine learning 
+#### application services for web, mobile, analytics and back-end solutions.
 
 
 ## By the end we should be able to, identify the purpose and value of
