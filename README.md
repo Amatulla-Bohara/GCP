@@ -5,6 +5,8 @@
 - [The Google Cloud Locations](#Google-Cloud-Locations)
 - [Environmental Impact](Environmental-Impact)
 - [Security](#Security)
+- [OpenSource Ecosystem](#OpenSource-Ecosystem)
+- [Pricing & Billing](#Pricing-&-Billing)
 
 # Introduction-Google Cloud Fundamentals
 
@@ -170,3 +172,56 @@ The GFE additionally applies protections against denial-of-service attacks. Also
 4. Finally, there are stringent software development practices. Google employs central source control and requires two-party review of new code. Google also provides developers with libraries that prevent them from introducing certain classes of security bugs. 
 
  Additionally, Google runs a vulnerability rewards program, where we pay anyone who's able to discover and inform us of bugs in our infrastructure or applications. You can learn more about Google's technical infrastructure security at cloud.google.com/ security/security-design.
+
+
+# OpenSource Ecosystem
+
+Some organizations are afraid to bring their workloads to the Cloud because they're afraid they'll get locked into a particular vendor. However, if for whatever reason, the customer decides that google is no longer the best provider for their needs, we provide them with the ability to run your applications elsewhere. 
+
+Google publishes key elements of technology using open source licenses to create ecosystems that provide customers with options other than Google. 
+
+For example, TensorFlow, an open source software library for machine learning developed inside Google is at the heart of a strong open source ecosystem. Google provides interoperability at multiple layers of the stack. 
+Kubernetes and Google Kubernetes Engine give customers the ability to mix and match microservices running across different Clouds. 
+
+Well, Google Cloud's Operations Suite, let's customers monitor workloads across multiple Cloud providers.
+
+
+# Pricing & Billing 
+
+Google was the first major cloud provider to deliver per-second billing for its infrastructure as a service compute offering compute engine. In addition, per-second billing is now also offered for users of 
+
+#### Google Kubernetes Engine, our container infrastructure as a service 
+#### Dataproc, which is the equivalent of the big data system Hadoop but operating as a service 
+#### App Engine flexible environment VMs, a platform as a service. 
+
+Compute Engine offers automatically applied sustained-use discounts which are automatic discounts that you get for running a virtual machine instance for a significant portion of the billing month. Specifically, when you run an instance for more than 25% of a month, Compute Engine automatically gives you a discount for every incremental minute you use for that instance. 
+
+Custom virtual machine types allow Compute Engine virtual machines to be fine tuned with optimal amounts of vCPU and memory for the applications so that you can tailor your pricing for your workloads.
+
+Our online pricing calculator can help estimate your costs. Visit cloud.google.com/products/calculator to try it out.
+
+You can define budgets at the billing account level or at the project level. 
+A budget can be a fixed limit or it can be tied to another metric, for example, a percentage of the previous month spent. To be notified when costs approach your budget limit, you can create an alert. For example, with a budget limit of $20,000 and an alert set at 90%, you'll receive a notification alert when your expenses reach $18,000. Alerts are generally set at 50%, 90%, and 100% but can also be customized. 
+
+Reports is a visual tool in the Google Cloud Console that allows you to monitor expenditure based on a project or services.
+
+Finally, Google Cloud also implements quotas which are designed to prevent the over consumption of resources because of an error or a malicious attack protecting both accounts owners and the Google Cloud community as a whole.
+
+### There are two types of quotas
+1. rate quotas 
+2. allocation quotas
+
+both are applied at the project level. 
+
+1. Rate quotas reset after a specific time. For example, by default, the GKE service implements a quota of 1000 calls to it's API from each Google Cloud project every 100 seconds. After that 100 seconds, the limit is reset. 
+
+2. Allocation quotas govern the number of resources you can have in your projects. For example, by default each Google Cloud project has a quota allowing it no more than five virtual private cloud networks. Although projects all start with the same quotas, you can change some of them by requesting an increase from Google Cloud support.
+
+
+
+
+
+
+
+
+
