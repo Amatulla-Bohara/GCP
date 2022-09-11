@@ -438,7 +438,9 @@ This means that for stable and predictable workloads, a specific amount of vCPUs
 #### Then there are preemptible VMs. 
 Let's say, you have a workload that doesn't require a human to sit and wait for it to finish, such as a batch job analyzing a large dataset. You can save money, in some cases up to 90 percent by choosing preemptible VMs to run the job. 
 
-A preemptible VM is different from an ordinary Compute Engine VM in only one respect. Compute Engine has permission to terminate a job if its resources are needed elsewhere. Although savings are possible with preemptible VMs, you need to ensure that your job can be stopped and restarted. In terms of storage, Compute Engine doesn't require a particular option or machine type to get high-throughput between processing and persistent disks. That's the default and it comes to you at no extra cost. 
+A preemptible VM is different from an ordinary Compute Engine VM in only one respect. Compute Engine has permission to terminate a job if its resources are needed elsewhere. Although savings are possible with preemptible VMs, you need to ensure that your job can be stopped and restarted. 
+
+In terms of storage, Compute Engine doesn't require a particular option or machine type to get high-throughput between processing and persistent disks. That's the default and it comes to you at no extra cost. 
 
 Finally, you'll only pay for what you need with custom machine types. Compute Engine lets you choose the machine properties of your instances, like the number of virtual CPUs and the amounts of memory by using a set of predefined machine types, or by creating your own custom machine types.
 
@@ -450,7 +452,8 @@ In Compute engine we can choose the most appropriate machine properties for your
 ### Autoscaling
 
 where VMs can be added to or subtracted from an application based on load metrics. The other part of making that work is balancing the incoming traffic among the VMs. Google’s Virtual Private Cloud (VPC) supports several different kinds of load balancing.
-With Compute Engine, you can in fact configure very large VMs, which are great for workloads such as in-memory databases and CPU-intensive analytics, but most Google Cloud customers start off with scaling out, not up. The maximum number of CPUs per VM is tied to its “machine family” and is also constrained by the quota available to the user, which is zone-dependent. 
+With Compute Engine, you can in fact configure very large VMs, which are great for workloads such as in-memory databases and CPU-intensive analytics, but most Google Cloud customers start off with scaling out, not up. 
+The maximum number of CPUs per VM is tied to its “machine family” and is also constrained by the quota available to the user, which is zone-dependent. 
 
 Specifications for currently available VM machine types can be found at cloud.google.com/compute/docs/machine-types
 
