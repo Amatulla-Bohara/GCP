@@ -172,6 +172,7 @@ The GFE additionally applies protections against denial-of-service attacks. Also
 
 ### 1.6. The final layer is Google's operational security layer, which provides four key features. 
 
+
 1. First, is intrusion detection. Rules and Machine Intelligence give Google's operational security teams warnings of possible incidence. Google conducts red team exercises to measure and improve the effectiveness of its detection and response mechanisms. 
 
 2. Next is reducing insider risk. Google aggressively limits and actively monitors the activities of employees who have been granted administrative access to the infrastructure. 
