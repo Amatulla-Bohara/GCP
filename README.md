@@ -195,7 +195,7 @@ Kubernetes and Google Kubernetes Engine give customers the ability to mix and ma
 Well, Google Cloud's Operations Suite, let's customers monitor workloads across multiple Cloud providers.
 
 
-# Pricing & Billing 
+# Pricing & Billing-
 
 Google was the first major cloud provider to deliver per-second billing for its infrastructure as a service compute offering compute engine. In addition, per-second billing is now also offered for users of 
 
@@ -359,7 +359,7 @@ There are four ways to access and interact with Google Cloud.
 3. The APIs
 4. The Cloud Console Mobile App
 
-### First is the Google Cloud Console
+### First is the Google Cloud Console -
 It is Google Cloud's graphical user interface or GUI that helps you deploy, scale, and diagnose production issues in a simple web-based interface.
 With the Cloud Console-
 ##### you can easily find your resources
