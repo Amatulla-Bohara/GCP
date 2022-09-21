@@ -457,7 +457,6 @@ The maximum number of CPUs per VM is tied to its “machine family” and is als
 
 Specifications for currently available VM machine types can be found at cloud.google.com/compute/docs/machine-types
 
-
-
+https://github.com/Amatulla-Bohara/GCP/edit/main/README.md
 
 
