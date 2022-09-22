@@ -455,8 +455,7 @@ where VMs can be added to or subtracted from an application based on load metric
 With Compute Engine, you can in fact configure very large VMs, which are great for workloads such as in-memory databases and CPU-intensive analytics, but most Google Cloud customers start off with scaling out, not up. 
 The maximum number of CPUs per VM is tied to its “machine family” and is also constrained by the quota available to the user, which is zone-dependent. 
 
-Specifications for currently available VM machine types can be found at cloud.google.com/compute/docs/machine-types
-
+]
 https://github.com/Amatulla-Bohara/GCP/edit/main/README.md
 
 
